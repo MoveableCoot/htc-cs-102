@@ -57,5 +57,15 @@ namespace MovieList
                 selectedMovie.ShowDetails();
             }
         }
+
+        private void AddAnimatedMovieButton_Click(object sender, RoutedEventArgs e)
+        {
+            AnimatedMovie movieToAdd = new AnimatedMovie(titleInput.Text, int.Parse(releaseYearInput.Text),);
+
+            MovieList.Add(movieToAdd);
+
+            titleInput.Clear();
+            releaseYearInput.Clear();
+        }
     }
 }
