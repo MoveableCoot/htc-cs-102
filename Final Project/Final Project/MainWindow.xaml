@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <TextBlock x:Name="PlaylistBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Your Spotify Playlist" VerticalAlignment="Top" Height="23" Width="107" Margin="202,0,0,0"/>
+        <Label x:Name="AddSongsLabel" Content="Add new songs here" HorizontalAlignment="Left" Margin="189,28,0,0" VerticalAlignment="Top" Width="120" Height="25"/>
+        <TextBlock x:Name="SongTitleTextBlock" HorizontalAlignment="Left" Height="15" Margin="140,69,0,0" TextWrapping="Wrap" Text="Song Title" VerticalAlignment="Top" Width="235"/>
+        <TextBox x:Name="SongTitleTextBox" HorizontalAlignment="Left" Height="24" Margin="140,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="235"/>
+        <TextBlock x:Name="ArtistTextBlock" HorizontalAlignment="Left" Height="17" Margin="140,118,0,0" TextWrapping="Wrap" Text="Artist" VerticalAlignment="Top" Width="235"/>
+        <TextBox x:Name="ArtistTextBox" HorizontalAlignment="Left" Height="20" Margin="140,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="235"/>
+        <Button x:Name="AddSongButton" Content="Add Song" HorizontalAlignment="Left" Height="20" Margin="140,165,0,0" VerticalAlignment="Top" Width="235" Click="AddSongButton_Click"/>
+        <Button x:Name="ShowAllButton" Content="Show All Songs" HorizontalAlignment="Left" Height="20" Margin="140,190,0,0" VerticalAlignment="Top" Width="235" Click="ShowAllButton_Click"/>
     </Grid>
 </Window>

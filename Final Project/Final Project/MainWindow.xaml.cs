@@ -20,9 +20,34 @@ namespace Final_Project
     /// </summary>
     public partial class MainWindow : Window
     {
+        public List<Song> songList;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            songList = new List<Song>();
+        }
+
+        private void AddSongButton_Click(object sender, RoutedEventArgs e)
+        {
+            string name = SongTitleTextBox.Text;
+            string artist = ArtistTextBox.Text;
+            SongTitleTextBox.Clear();
+            ArtistTextBox.Clear();
+
+            Song newMovie = new Song(name, artist);
+
+            songList.Add(newMovie);
+        }
+
+        private void ShowAllButton_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (Song song in songList)
+            {
+                song.ShowSong();
+                song.ShowArtist();
+            }
         }
     }
 }
